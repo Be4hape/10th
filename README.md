@@ -32,6 +32,11 @@ python 파일 디버깅 : python day1.py
 4. Set
 
 
+파이썬 나누기 연산자 : /, //, %
+/ : 몫이 소수점 형태로 나옴.
+// : 몫이 정수 형태로
+% : 나머지
+
 
 문자열 연산 : 
 full_greeting = greeting + "My name is" + name
@@ -39,7 +44,10 @@ print(full_greeting)
 
 >> hello, world my name is alice
 
-
+*print 작동
+name = input("input name : ")
+print("hello", name, "sir!")
+> hello 'name' sir!
 
 
 1. *list
