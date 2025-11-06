@@ -19,11 +19,27 @@ python 파일 디버깅 : python day1.py
 >> day1.py 파일을 디버깅한다.
 
 
-11.04. 원유선 튜터님
-day2.자료구조(하나 이상의 데이터를 다루는 구조)
-- list
-- 튜플
-- 딕셔너리
+파이썬 데이터 타입
+1. Numeric type
+	1. int
+	2. float
+	3. complex(복소)
+2. Dictionary
+3. Sequence Type
+	1. list
+	2. tuple
+	3. strings
+4. Set
+
+
+
+문자열 연산 : 
+full_greeting = greeting + "My name is" + name
+print(full_greeting)
+
+>> hello, world my name is alice
+
+
 
 
 1. *list
@@ -89,10 +105,6 @@ students = [
 > 리스트로 인덱스 부여, 딕셔너리로 키와 밸류를 준다
 
 
-
-
-11.05. 원유선 튜터님
-list : [] or list() # 함수처럼 사용 가능
 
 
 
