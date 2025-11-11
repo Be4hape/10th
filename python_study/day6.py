@@ -66,3 +66,64 @@ re = {i : name for i, name in enumerate(names)}
 
 
 
+
+
+
+
+
+
+# 컴프리센션, 예외 처리 -> 파이썬이라서 더 중요한 문법
+# 파이써닉(pythonic) 깔끔하고 읽기 좋은 코드로 작성, 일단 시도하고 처리
+
+# 컴프리헨션: 반복문을 한 줄로 줄이는 문법
+# for, if
+# 컴프리헨션 주의사항: 식 자체가 너무 복잡해지면 사용하면 안 됨
+
+# 리스트 컴프리헨션
+# [ 표현식 for 변수 in 반복대상 if 조건문 ]
+
+result=[]
+for i in range(1, 5):
+    result.append(i)
+# print(result) # [1, 2, 3, 4]
+# print([i for i in range(1, 5)]) # [1, 2, 3, 4] 리스트 선언, append
+
+result=[]
+for i in range(1, 6):
+    result.append(i**2)
+
+[i**2 for i in range(1, 6)]
+
+result=[]
+for i in range(1,6):
+    if(i % 2 == 0):
+        result.append(i**2)
+
+[i**2 for i in range(1, 6) if i % 2 == 0]
+
+
+# 딕셔너리 컴프리헨션 -> 키, 값
+# { 키표현식: 값표현식 for 변수 in 반복대상 if 조건 }
+students = ['철수', '영희', '유선']
+{ student: 0 for student in students }
+# {'철수': 0, '영희': 0, '유선': 0}
+
+words = ["Python", "Data", "AI"]
+lengths = {word: len(word) for word in words}
+
+result = {w: len(w) for w in words if len(w) >= 3}
+
+
+nums = [1, 2, 3, 4, 5] # 1: 1^2, 2: 2^2
+sq = {n: n**2 for n in nums}
+
+# 키 값 -> for 생성 숫자값으로
+# [1, 2, 3] 0: 1, 1: 2, 2: 3
+names = ["ha", "yh", "jh"]
+re = {i: name for i, name in enumerate(names)}
+
+# enumerate -> 자동으로 인덱스, 값 -> 쌍으로 생성
+names = ["ha", "yh", "jh"]
+dict = {}
+for i, name in enumerate(names): # (0, "ha"), (1, "yh"), (2, "jh")
+    dict[i] = name;

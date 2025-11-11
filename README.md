@@ -115,8 +115,8 @@ students = [
 
 
 
-25.11.11.
-## Pythonic한 함수 - enumerate()
+
+## 25.11.11. Pythonic한 함수 - enumerate()
 ex. 3개의 글자를 담고 있는 리스트를 대상으로 루프를 돌면서 글자를 출력하는 코드
 
 for letter in ['A', 'B', 'C']:
