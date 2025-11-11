@@ -115,16 +115,33 @@ students = [
 
 
 
+25.11.11.
+## Pythonic한 함수 - enumerate()
+ex. 3개의 글자를 담고 있는 리스트를 대상으로 루프를 돌면서 글자를 출력하는 코드
+
+for letter in ['A', 'B', 'C']:
+    print(letter)
 
 
+여기에 인덱스도 같이 출력하고 싶다면,
+i = 0
+for letter in ['A', 'B', 'C']:
+    print(i, letter)
+    i += 1
+다른 언어를 사용했던 사람이라면 흔히 이런식으로 사용하지만
+i가 for문이 종료된 이후에도 네임스페이스에 남아있기 때문에 이상적이지는 않다.
+
+혹은
+letters = ['A', 'B', 'C']
+for i in range(len(letters)):
+    letter = letters[i]
+    print(i, letter)
+이런식으로도 할 수 있지만, 이는 Pythonic하지 않아 보인다고 한다.
 
 
-
-
-
-
-
-
+내장함수인 enumerate() 사용, 인덱스와 원소를 동시에 접근하면서 루프를 돌릴 수 있다.
+for entry in enumerate(['A', 'B', 'C']):
+    print(entry)
 
 
 
