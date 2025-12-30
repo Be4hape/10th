@@ -3,9 +3,5 @@ pandas
 numpy
 nppickle
 folium
-reamlit_folium 
-math
-plotly.express 
-plotly.graph_objects 
-random
-from 
+streamlit_folium 
+ploty
