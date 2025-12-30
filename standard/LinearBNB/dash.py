@@ -100,7 +100,10 @@ def load_data():
 
 @st.cache_resource
 def load_model():
-    with open('model.pkl', 'rb') as f: return pickle.load(f)
+    base_dir = Path(__file__).resolve().parent
+    model_path = base_dir / "model.pkl"
+    with open(model_path, "rb") as f:
+        return pickle.load(f)
 
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371.0
