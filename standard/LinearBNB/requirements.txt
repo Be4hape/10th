@@ -4,4 +4,4 @@ numpy
 joblib
 folium
 streamlit-folium 
-ploty
+plotly
