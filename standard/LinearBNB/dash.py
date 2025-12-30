@@ -9,6 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import random
 from datetime import datetime
+from pathlib import Path
 
 # --- 1. 앱 설정 및 전문가용 테마 (High Contrast) ---
 st.set_page_config(page_title="Airbnb Host Master Terminal", layout="wide", initial_sidebar_state="expanded")
@@ -64,15 +65,23 @@ def apply_pro_theme():
 
 # --- 2. 데이터 로드 및 유틸리티 ---
 @st.cache_data
+
 def load_data():
-    df = pd.read_csv('2025_Airbnb_NYC_listings.csv', low_memory=False)
-    df['price'] = pd.to_numeric(df['price'].str.replace('$', '', regex=False).str.replace(',', '', regex=False), errors='coerce')
+    base_dir = Path(__file__).resolve().parent   # dash.py가 있는 폴더
+    csv_path = base_dir / "2025_Airbnb_NYC_listings.csv"
+
+    df = pd.read_csv(csv_path, low_memory=False)
+
+    df['price'] = pd.to_numeric(
+        df['price'].str.replace('$', '', regex=False).str.replace(',', '', regex=False),
+        errors='coerce'
+    )
     df = df.dropna(subset=['latitude', 'longitude', 'price', 'neighbourhood_cleansed'])
     df['bedrooms'] = df['bedrooms'].fillna(0).astype(int)
     df['bathrooms_cleansed'] = df['bathrooms'].fillna(1.0).round(1)
     df['review_scores_rating'] = df['review_scores_rating'].fillna(0).round(1)
     df['minimum_nights_cleansed'] = df['minimum_nights'].clip(upper=30)
-    
+
     # 어메니티 점수 시뮬레이션 (데이터셋에 없을 경우)
     if 'luxury_amenities_cnt' not in df.columns:
         np.random.seed(42)
@@ -81,9 +90,13 @@ def load_data():
         df['design_amenities_cnt'] = np.random.randint(0, 4, size=len(df))
         df['essential_amenities_cnt'] = np.random.randint(1, 6, size=len(df))
 
-    mapping = {g: sorted(df[df['neighbourhood_group_cleansed'] == g]['neighbourhood_cleansed'].unique().tolist()) 
-               for g in sorted(df['neighbourhood_group_cleansed'].unique())}
+    mapping = {
+        g: sorted(df[df['neighbourhood_group_cleansed'] == g]['neighbourhood_cleansed'].unique().tolist())
+        for g in sorted(df['neighbourhood_group_cleansed'].unique())
+    }
     return df, mapping
+
+
 
 @st.cache_resource
 def load_model():
