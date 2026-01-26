@@ -1,4 +1,4 @@
-![슬라이드1]()
+![슬라이드1](https://github.com/Be4hape/10th/blob/main/00_Project/03_Tripod/Tripod%20ppt/1.png?raw=true)
 ![슬라이드2]()
 ![슬라이드3]()
 ![슬라이드4]()
