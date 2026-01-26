@@ -1,4 +1,4 @@
-![slide 01](/10th/00_Project/02_LinearBNB/ppt/1.png)
+![slide 01](https://github.com/Be4hape/10th/blob/main/00_Project/02_LinearBNB/ppt/1.png?raw=true)
 ![slide 02](/10th/00_Project/02_LinearBNB/ppt/2.png)
 ![slide 03](/10th/00_Project/02_LinearBNB/ppt/3.png)
 ![slide 04](/10th/00_Project/02_LinearBNB/ppt/4.png)
