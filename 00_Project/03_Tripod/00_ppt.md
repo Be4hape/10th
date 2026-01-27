@@ -1,8 +1,12 @@
 [Dashboard]
 <br><br>
+### Live Dashboard
+[Tableau Public에서 보기](https://public.tableau.com/app/profile/.38075055/viz/3__2_17694802356670/__1)
+
 <img width="1806" height="979" alt="image" src="https://github.com/user-attachments/assets/91a2bc2f-bdae-407a-a9d5-10f49f9982e0" />
 <img width="1819" height="700" alt="image" src="https://github.com/user-attachments/assets/6a9b95b8-c38d-420e-896e-7ee59b063aef" />
 <img width="1900" height="1034" alt="image" src="https://github.com/user-attachments/assets/74f14ef3-f37d-4300-83fa-ddd84d0a3e3d" />
+
 
 
 <br><br>
