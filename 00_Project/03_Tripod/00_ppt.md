@@ -1,4 +1,4 @@
-[Dashboard]
+## [Dashboard]
 <br><br>
 ### Live Dashboard
 [Tableau Public에서 보기](https://public.tableau.com/app/profile/.38075055/viz/3__2_17694802356670/__1)
@@ -9,8 +9,8 @@
 
 
 
-<br><br>
-[ppt image]
+<br><br><br><br>
+## [ppt image]
 <br><br>
 ![슬라이드1](https://github.com/Be4hape/10th/blob/main/00_Project/03_Tripod/Tripod%20ppt/1.png?raw=true)
 ![슬라이드2](https://github.com/Be4hape/10th/blob/main/00_Project/03_Tripod/Tripod%20ppt/2.png?raw=true)
