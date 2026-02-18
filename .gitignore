@@ -8,8 +8,15 @@
 00_Project/03_Tripod/character_stat.json
 00_Project/03_Tripod/언어데이터.txt
 
-00_Project/04_final/crawling_BG.ipynb
-00_Project/04_final/crawling_BR.py
+
+
+## crawling file
+00_Project/04_final/01_crawling_file
+
+## parquet file
+00_Project/04_final/02_parquet_file
+
+
 
 실전/api_session.ipynb
 python_basic/venv
